@@ -19,7 +19,7 @@
         </header>
         
         <main>
-            <p>My favorite photos from across the years.</p>
+            <p>My favorite photos from across the years. I haven't fixed the gallery layout yet lol.</p>
 
             <div class="gallery-grid">
                 <div class="gallery-item">
@@ -100,20 +100,17 @@
         </footer>
     </div>
 
-    <!-- Lightbox Modal -->
     <div id="lightbox" class="lightbox">
         <span class="lightbox-close">&times;</span>
         <img class="lightbox-image" id="lightbox-image" src="" alt="">
     </div>
 
     <script>
-        // Get all gallery items
         const galleryItems = document.querySelectorAll('.gallery-item img');
         const lightbox = document.getElementById('lightbox');
         const lightboxImage = document.getElementById('lightbox-image');
         const lightboxClose = document.querySelector('.lightbox-close');
 
-        // Open lightbox when clicking on an image
         galleryItems.forEach(img => {
             img.addEventListener('click', () => {
                 lightboxImage.src = img.src;
@@ -123,13 +120,11 @@
             });
         });
 
-        // Close lightbox when clicking the close button
         lightboxClose.addEventListener('click', () => {
             lightbox.style.display = 'none';
             document.body.style.overflow = 'auto';
         });
 
-        // Close lightbox when clicking outside the image
         lightbox.addEventListener('click', (e) => {
             if (e.target === lightbox) {
                 lightbox.style.display = 'none';
@@ -137,7 +132,6 @@
             }
         });
 
-        // Close lightbox with Escape key
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && lightbox.style.display === 'flex') {
                 lightbox.style.display = 'none';

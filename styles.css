@@ -217,7 +217,8 @@ main a:active {
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-auto-rows: 180px;
     gap: 20px;
     margin-top: 20px;
     width: 100%;
@@ -226,16 +227,12 @@ main a:active {
 
 .gallery-item {
     width: 100%;
+    height: 100%;
     overflow: hidden;
     position: relative;
-    padding-bottom: 100%; /* Fallback for aspect-ratio: 1 */
-    aspect-ratio: 1;
 }
 
 .gallery-item img {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
