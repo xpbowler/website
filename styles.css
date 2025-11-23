@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Calibri Light', Calibri, 'Segoe UI', sans-serif;
+    font-size: 14pt;
+    font-weight: 300;
+    background-color: #ffffff;
+    color: #000000;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+header {
+    margin-bottom: 40px;
+}
+
+.site-title {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 20px;
+    font-family: 'Calibri Light', Calibri, 'Segoe UI', sans-serif;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.nav-link {
+    color: #666666;
+    text-decoration: none;
+    font-size: 14pt;
+    font-weight: 400;
+    transition: color 0.2s;
+}
+
+.nav-link:hover {
+    color: #000000;
+}
+
+.nav-link.active {
+    color: #000000;
+}
+
+main {
+    margin-top: 20px;
+}
+
+.greeting {
+    font-size: 16pt;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 20px;
+    font-family: 'Calibri Light', Calibri, 'Segoe UI', sans-serif;
+}
+
+.section-title {
+    font-size: 14pt;
+    font-weight: 300;
+    color: #000000;
+    margin-bottom: 20px;
+    font-family: 'Calibri Light', Calibri, 'Segoe UI', sans-serif;
+}
+
+main p {
+    font-size: 14pt;
+    font-weight: 300;
+    color: #000000;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.blog-post {
+    margin-bottom: 40px;
+}
+
+.post-title {
+    font-size: 16pt;
+    font-weight:560;
+    color: #000000;
+    margin-bottom: 8px;
+    font-family: 'Calibri Light', Calibri, 'Segoe UI', sans-serif;
+}
+
+.post-date {
+    font-size: 14pt;
+    font-weight: 300;
+    color: #666666;
+    margin-bottom: 12px;
+}
+
+.post-excerpt {
+    font-size: 14pt;
+    font-weight: 300;
+    color: #000000;
+    line-height: 1.6;
+}
+
+.blog-post-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.blog-post-link:hover .post-title {
+    text-decoration: underline;
+}
+
+footer {
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.footer-text {
+    font-size: 14pt;
+    color: #666666;
+    line-height: 1.6;
+}
+
+.footer-text .footer-line-1 {
+    color: #333333;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.footer-text .footer-line-2 {
+    color: #666666;
+}
+
+.footer-link {
+    color: #0066cc;
+    text-decoration: underline;
+}
+
+.footer-link:hover {
+    color: #004499;
+}
+
+.post-content {
+    margin-top: 20px;
+}
+
+.post-content p {
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+.post-content ol,
+.post-content ul {
+    margin-left: 0;
+    padding-left: 20px;
+    font-weight: 300;
+}
+
+.post-content li {
+    margin-bottom: 30px;
+}
+
+main a {
+    color: #0066cc;
+    text-decoration: underline;
+}
+
+main a:visited {
+    color: #0066cc;
+}
+
+main a:hover {
+    color: #004499;
+}
+
+main a:active {
+    color: #0066cc;
+}
+
+.blog-post-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.post-content blockquote.quote {
+    margin: 30px 0;
+    padding-left: 20px;
+    border-left: 3px solid #e0e0e0;
+    font-style: italic;
+}
+
+.post-content .quote-text {
+    font-size: 14pt;
+    font-weight: 300;
+    font-style: italic;
+    color: #000000;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.post-content .quote-author {
+    font-size: 14pt;
+    font-weight: 300;
+    font-style: italic;
+    color: #666666;
+    margin-bottom: 0;
+    text-align: right;
+}
+
