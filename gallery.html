@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Ryan N</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="site-title">Ryan Nguyen</h1>
+            <nav>
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="gallery.html" class="nav-link active">Gallery</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+        </header>
+        
+        <main>
+            <p>My favorite photos from across the years.</p>
+
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="photos/1876.JPEG" alt="Photo 1876">
+                </div>
+                <div class="gallery-item">
+                    <img src="photos/eclipse.JPG" alt="Eclipse">
+                </div>
+                <div class="gallery-item">
+                    <img src="photos/IMG_0234.jpg" alt="Photo 0234">
+                </div>
+                <div class="gallery-item">
+                    <img src="photos/IMG_0237.jpg" alt="Photo 0237">
+                </div>
+                <div class="gallery-item">
+                    <img src="photos/IMG_0573.jpg" alt="Photo 0573">
+                </div>
+                <div class="gallery-item">
+                    <img src="photos/IMG_0828.jpg" alt="Photo 0828">
+                </div>
+                <div class="gallery-item">
+                    <img src="photos/IMG_2767.jpg" alt="Photo 2767">
+                </div>
+                <div class="gallery-item">
+                    <img src="photos/IMG_3650.jpg" alt="Photo 3650">
+                </div>
+                <div class="gallery-item">
+                    <img src="photos/IMG_5057.jpg" alt="Photo 5057">
+                </div>
+                <div class="gallery-item">
+                    <img src="photos/IMG_5564.JPG" alt="Photo 5564">
+                </div>
+                <div class="gallery-item">
+                    <img src="photos/IMG_5723.JPG" alt="Photo 5723">
+                </div>
+                <div class="gallery-item">
+                    <img src="photos/IMG_6596.JPG" alt="Photo 6596">
+                </div>
+                <div class="gallery-item">
+                    <img src="photos/IMG_6606.JPG" alt="Photo 6606">
+                </div>
+                <div class="gallery-item">
+                    <img src="photos/IMG_6749.jpg" alt="Photo 6749">
+                </div>
+                <div class="gallery-item">
+                    <img src="photos/IMG_6845.jpg" alt="Photo 6845">
+                </div>
+                <div class="gallery-item">
+                    <img src="photos/IMG_6888.jpg" alt="Photo 6888">
+                </div>
+                <div class="gallery-item">
+                    <img src="photos/IMG_5864.JPG" alt="Photo 5864">
+                </div>
+                <div class="gallery-item">
+                    <img src="photos/IMG_6196.JPG" alt="Photo 6196">
+                </div>
+                <div class="gallery-item">
+                    <img src="photos/IMG_6261.JPG" alt="Photo 6261">
+                </div>
+                <div class="gallery-item">
+                    <img src="photos/IMG_6418.JPG" alt="Photo 6418">
+                </div>
+                <div class="gallery-item">
+                    <img src="photos/IMG_6487.JPG" alt="Photo 6487">
+                </div>
+                <div class="gallery-item">
+                    <img src="photos/santa_cruz.JPEG" alt="Santa Cruz">
+                </div>
+                
+            </div>
+        </main>
+        
+        <footer>
+            <div class="footer-text">
+                <div class="footer-line-1">Made by Ryan Nguyen</div>
+                <div class="footer-line-2">Except where specified otherwise, all content is available under <a href="https://creativecommons.org/licenses/by-sa/3.0/" class="footer-link" target="_blank">CC BY-SA 3.0</a></div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-image" id="lightbox-image" src="" alt="">
+    </div>
+
+    <script>
+        // Get all gallery items
+        const galleryItems = document.querySelectorAll('.gallery-item img');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightbox-image');
+        const lightboxClose = document.querySelector('.lightbox-close');
+
+        // Open lightbox when clicking on an image
+        galleryItems.forEach(img => {
+            img.addEventListener('click', () => {
+                lightboxImage.src = img.src;
+                lightboxImage.alt = img.alt;
+                lightbox.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Close lightbox when clicking the close button
+        lightboxClose.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+
+        // Close lightbox when clicking outside the image
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Close lightbox with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.style.display === 'flex') {
+                lightbox.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+    </script>
+</body>
+</html>
+
