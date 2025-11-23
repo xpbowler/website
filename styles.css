@@ -168,6 +168,51 @@ footer {
     margin-bottom: 30px;
 }
 
+.post-content h1,
+.post-content h2,
+.post-content h3 {
+    margin: 20px 0 10px 0;
+    font-family: 'Calibri Light', Calibri, 'Segoe UI', sans-serif;
+    font-weight: 560;
+    color: #000000;
+}
+
+.post-content h1 {
+    font-size: 20pt;
+}
+
+.post-content h2 {
+    font-size: 18pt;
+}
+
+.post-content h3 {
+    font-size: 16pt;
+}
+
+.post-content pre {
+    background: #f5f5f5;
+    padding: 12px;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-family: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 12pt;
+    margin: 16px 0;
+}
+
+.post-content code {
+    background: #f0f0f0;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-family: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 12pt;
+}
+
+.post-content hr {
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    margin: 24px 0;
+}
+
 main a {
     color: #0066cc;
     text-decoration: underline;
@@ -281,4 +326,3 @@ main a:active {
 .lightbox-close:hover {
     opacity: 0.7;
 }
-
